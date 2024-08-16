@@ -4,7 +4,11 @@
   "description": "cheeseburger",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vite": "vite",
+    "predev": "node prev.js",
+    "dev": "node index.js",
+    "postdev": "node post.js"
   },
   "repository": {
     "type": "git",
@@ -13,12 +17,10 @@
   "author": "tony",
   "license": "ISC",
   "dependencies": {
+    "vite": "^5.4.1",
     "vue": "^3.4.38"
   },
   "devDependencies": {
     "md5": "^2.3.0"
-  },
-  "peerDependencies": {
-    
   }
 }
