@@ -40,3 +40,14 @@ package-lock.json 帮我们做了缓存，他会通过 name + version + integrit
 "dev":"node index.js",
 "postdev":"node post.js"
 ```
+
+### npx 的优势
+[npx](https://juejin.cn/post/7261423108509302842)
+1.避免全局安装：npx允许你执行npm package，而不需要你先全局安装它。
+2.总是使用最新版本：如果你没有在本地安装相应的npm package，npx会从npm的package仓库中下载并使用最新版。
+3.执行任意npm包：npx不仅可以执行在package.json的scripts部分定义的命令，还可以执行任何npm package。
+4.执行GitHub gist：npx甚至可以执行GitHub gist或者其他公开的JavaScript文件。
+
+### npm 和 npx 区别
+npx侧重于执行命令的，执行某个模块命令。虽然会自动安装模块，但是重在执行某个命令
+npm侧重于安装或者卸载某个模块的。重在安装，并不具备执行某个模块的功能。
