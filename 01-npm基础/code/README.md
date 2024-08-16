@@ -43,6 +43,7 @@ package-lock.json 帮我们做了缓存，他会通过 name + version + integrit
 
 ### npx 的优势
 [npx](https://juejin.cn/post/7261423108509302842)
+
 1.避免全局安装：npx允许你执行npm package，而不需要你先全局安装它。
 2.总是使用最新版本：如果你没有在本地安装相应的npm package，npx会从npm的package仓库中下载并使用最新版。
 3.执行任意npm包：npx不仅可以执行在package.json的scripts部分定义的命令，还可以执行任何npm package。
@@ -54,8 +55,29 @@ npm侧重于安装或者卸载某个模块的。重在安装，并不具备执�
 
 
 ### 发布npm的包的好处是什么
-
 1.方便团队或者跨团队共享代码，使用npm包就可以方便的管理，并且还可以进行版本控制
 2.做开源造轮子必备技术，否则你做完的轮子如何让别人使用难道是U盘拷贝？
 3.面试题我面字节的时候就问到了这个
 4.增加个人IP 让更多的人知道你的技术能力和贡献
+
+### 搭建npm私服
+Verdaccio 是可以帮我们快速构建npm私服的一个工具
+```sh
+npm install verdaccio -g
+
+#创建账号
+npm adduser --registry http://localhost:4873/
+# 账号 密码 邮箱
+
+# 发布npm
+npm publish --registry http://localhost:4873/
+
+#指定开启端口 默认 4873
+verdaccio --listen 9999
+
+# 指定安装源
+npm install --registry http://localhost:4873
+
+# 从本地仓库删除包
+npm unpublish <package-name> --registry http://localhost:4873
+```
