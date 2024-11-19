@@ -8,6 +8,7 @@ fs.writeFile(
   "./ccc.txt",
   content,
   {
+    // 如果不穿encoding默认则是Buffer
     encoding: "utf-8",
     // 使用w则是写入，w+是可读可写，a是进行追加写入
     flag: "w",
