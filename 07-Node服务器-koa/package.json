@@ -1,0 +1,14 @@
+{
+  "name": "learn-koa",
+  "version": "1.0.0",
+  "main": "01-koa的基本使用过程.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "koa": "^2.15.3"
+  }
+}
