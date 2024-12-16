@@ -1,0 +1,15 @@
+{
+  "name": "koa_express_diff",
+  "version": "1.0.0",
+  "main": "01-express中间件-执行同步.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "koa": "^2.15.3"
+  }
+}
