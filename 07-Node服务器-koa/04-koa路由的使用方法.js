@@ -31,6 +31,13 @@ const app = new Koa();
 // 3.让路由中的中间件生效
 app.use(userRouter.routes());
 // 通过allowedMethods方法返回具有相应的Method Not Allowed状态的响应
+/**
+ * 例如：
+ * 如果客户端发送了一个 DELETE 请求，而你的路由器没有为 DELETE 方法定义路由，
+ * allowedMethods() 会通过 Koa 的上下文（ctx) 返回一个 405 Method Not Allowed 错误。
+ * 它还会在响应头中加上 Allow 字段，列出所有当前路由器允许的 HTTP 方法。
+ * 当请求的方法没有匹配到任何路由时，返回一个 405 状态码，表示该方法不被允许。
+ */
 app.use(userRouter.allowedMethods());
 
 
