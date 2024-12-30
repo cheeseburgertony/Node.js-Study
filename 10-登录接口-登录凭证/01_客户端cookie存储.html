@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>客户端的网站</h2>
+  <button>设置cookie</button>
+
+  <script>
+    // 在客户端设置cookie(开发中很少用，一般cookie都是服务端设置的)
+    // 通过这样一个字符串的形式来设置cookie，字符串的格式是key=value
+    // 如果不为cookie设置过期时间，那么cookie的生命周期就是浏览器的生命周期，这是一个会话cookie，存储在内存中
+    // 如果为cookie设置了过期时间，那么cookie的生命周期就是过期时间，这是一个持久化cookie，存储在硬盘中
+    // 通过Domain属性可以设置cookie的作用域，如果不设置Domain属性，那么cookie的作用域就是当前的域名，不包括子域名
+    // 例如：www.baidu.com cookie的作用域就是www.baidu.com，不包括news.baidu.com 等等其他子域名
+    // 通过Path属性可以设置cookie的路径，如果不设置Path属性，那么cookie的路径就是当前的路径
+    const btnEl = document.querySelector('button')
+    btnEl.onclick = function () {
+      document.cookie = 'name=tony;max-age=30;';
+      document.cookie = 'age=18;max-age=60;';
+    }
+
+  </script>
+</body>
+
+</html>
