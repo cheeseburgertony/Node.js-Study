@@ -1,0 +1,15 @@
+{
+  "name": "login_demo",
+  "version": "1.0.0",
+  "main": "02_服务器cookie设置.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@koa/router": "^13.1.0",
+    "koa": "^2.15.3"
+  }
+}
